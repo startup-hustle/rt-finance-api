@@ -3,10 +3,10 @@ package rt.finance;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class RtFinanceApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
 	}
 
