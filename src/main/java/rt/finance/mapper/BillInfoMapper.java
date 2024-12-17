@@ -2,11 +2,13 @@ package rt.finance.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.springframework.stereotype.Component;
 import rt.finance.dto.BillInfoRequestDto;
 import rt.finance.dto.BillInfoResponseDto;
 import rt.finance.entity.BillInfo;
 
 @Mapper(componentModel = "spring")
+@Component
 public interface BillInfoMapper {
 
     @Mapping(source = "name", target = "billName")

@@ -1,6 +1,6 @@
 package rt.finance.service.impl;
 
-import lombok.RequiredArgsConstructor;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 import rt.finance.dto.BillInfoRequestDto;
 import rt.finance.dto.BillInfoResponseDto;
@@ -10,11 +10,11 @@ import rt.finance.repository.BillInfoRepository;
 import rt.finance.service.BillInfoService;
 
 @Service
-@RequiredArgsConstructor
+@Data
 public class BillInfoServiceImpl implements BillInfoService{
 
-    BillInfoRepository billInfoRepository;
-    BillInfoMapper billInfoMapper;
+    final BillInfoRepository billInfoRepository;
+    final BillInfoMapper billInfoMapper;
 
     @Override
     public BillInfoResponseDto addBillInfo(BillInfoRequestDto billInfoRequestDto) {
