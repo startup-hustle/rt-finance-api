@@ -1,6 +1,6 @@
 package rt.finance.controller;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,11 +12,11 @@ import rt.finance.dto.BillInfoResponseDto;
 import rt.finance.service.BillInfoService;
 
 @RestController
-@AllArgsConstructor
+@RequiredArgsConstructor
 @RequestMapping("/api/v1")
 public class BillController {
 
-    private final BillInfoService billInfoService;
+    BillInfoService billInfoService;
 
     @PostMapping("/bill-info")
     public ResponseEntity<BillInfoResponseDto> addBillInfo(@RequestBody BillInfoRequestDto billInfoDto) {
